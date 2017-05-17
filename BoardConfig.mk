@@ -104,3 +104,27 @@ TW_MAX_BRIGHTNESS := 255
 TW_NO_SCREEN_BLANK := true
 TW_NO_USB_STORAGE := true
 TW_THEME := portrait_hdpi
+
+# MultiROM configuration
+MR_INPUT_TYPE := type_b
+MR_INIT_DEVICES := $(DEVICE_PATH)/multirom/mr_init_devices.c
+MR_NO_KEXEC := enabled
+MR_DPI := hdpi
+MR_DPI_FONT := 216
+MR_FSTAB := $(DEVICE_PATH)/recovery.fstab
+MR_USE_MROM_FSTAB := true
+MR_KEXEC_MEM_MIN := 0x85000000
+MR_DEVICE_VARIANTS := C5502 C5503 C5506
+MR_UNIFIED_TABS := true
+
+# MultiROM versioning
+ifeq ($(MR_REC_VERSION),)
+MR_REC_VERSION := $(shell date -u +%Y%m%d)
+endif
+
+# MultiROM version tag
+BOARD_KERNEL_NAME := mrom$(MR_REC_VERSION)
+
+# MultiROM build
+DEVICE_RESOLUTION := 720x1280
+TARGET_RECOVERY_IS_MULTIROM := true

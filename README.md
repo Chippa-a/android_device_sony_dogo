@@ -4,7 +4,7 @@ Sony Xperia ZR
 Copyright (C) 2013 The CyanogenMod Project  
 Copyright (C) 2017 The LineageOS Project  
 
-This is the Android device configuration for building TWRP Recovery only.
+This is the Android device configuration for building MultiROM only.
 
 Basic   | Spec Sheet
 -------:|:-------------------------
