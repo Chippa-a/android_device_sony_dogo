@@ -104,4 +104,3 @@ TW_MAX_BRIGHTNESS := 255
 TW_NO_SCREEN_BLANK := true
 TW_NO_USB_STORAGE := true
 TW_THEME := portrait_hdpi
-TW_USE_TOOLBOX := true
